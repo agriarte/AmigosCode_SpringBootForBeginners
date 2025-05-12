@@ -1,0 +1,32 @@
+# === Archivos y carpetas de Eclipse ===
+.project
+.classpath
+.settings/
+
+# === Carpeta de salida de Maven ===
+target/
+
+# === Configuraciones de Maven Wrapper ===
+.mvn/
+!**/mvnw
+!**/mvnw.cmd
+
+# === Archivos de log y temporales ===
+*.log
+*.tmp
+*.bak
+*.swp
+
+# === Archivos del sistema operativo ===
+.DS_Store
+Thumbs.db
+
+# === Configuración personal o sensible ===
+*.env
+*.local
+*.keystore
+
+# === Archivos de pruebas generados ===
+test-output/
+surefire-reports/
+
