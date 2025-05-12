@@ -1,0 +1,22 @@
+#Modificaciones respecto al video: eliminar variable de entorno PGDATA porque ahora el volumen es la ruta predeterminada.
+services:
+  db:
+    container_name: postgres
+    image: postgres:14.1
+    environment:
+      POSTGRES_USER: amigoscode
+      POSTGRES_PASSWORD: password
+    volumes:
+      - db:/var/lib/postgresql/data  # ruta predeterminada
+    ports:
+      - "5332:5432"
+    networks:
+      - db
+    restart: unless-stopped
+
+networks:
+  db:
+    driver: bridge
+
+volumes:
+  db:
